@@ -23,9 +23,9 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "6967910754:AAHC8_1TJnrHt9LTV89l3T9FppDR-MT00m0",
-             api_id= 20088962,
-             api_hash= "257f47d347157555890a64b12bc0134f")
+             bot_token= "7107104145:AAGpdOR5GWT0wxwCttrXvqfwmSZ0BO4mZqE",
+             api_id= 25046127,
+             api_hash= "b98e578e8b500c77c6a80839dfbdc4a5")
 
 
 @bot.on_message(filters.command(["start"])) 
@@ -45,7 +45,7 @@ async def account_login(bot: Client, m: Message):
     input: Message = await bot.listen(editable.chat.id)
     if input.document:
         x = await input.download()
-        await bot.send_document(-1001851582041, x)
+        await bot.send_document(-1002102444164, x)
         await input.delete(True)
         file_name, ext = os.path.splitext(os.path.basename(x))
         credit = "🌹🌹🌹"
@@ -87,7 +87,7 @@ async def account_login(bot: Client, m: Message):
     else:
         b_name = raw_text0
 
-    await editable.edit("**Enter resolution**")
+    await editable.edit("**Enter resolution 144,360,480,720,1080**")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
     await input2.delete(True)
@@ -175,7 +175,7 @@ async def account_login(bot: Client, m: Message):
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
-                        await copy.copy(chat_id = -1001851582041)
+                        await copy.copy(chat_id = -1002102444164)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
@@ -189,7 +189,7 @@ async def account_login(bot: Client, m: Message):
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                         os.system(download_cmd)
                         copy = await bot.send_document(chat_id=m.chat.id,document=f'{name}.pdf', caption=cc1)
-                        await copy.copy(chat_id = -1001851582041)
+                        await copy.copy(chat_id = -1002102444164)
                         count += 1
                         os.remove(f'{name}.pdf')
                     except FloodWait as e:
