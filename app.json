@@ -64,16 +64,6 @@
 
     },
 
-    "FR_TOKEN": {
-
-      "description": "FR_TOKEN",
-
-      "value":"f4f0e3047723385244d3aae0068d60ec09f79345",
-
-      "required": true
-
-    },
-
     "credits": {
 
       "description": "Give credit",
